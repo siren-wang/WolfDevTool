@@ -1,0 +1,98 @@
+.InspectedRequestWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+}
+
+.InspectedRequest {
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: var(--font-family-monospace);
+  font-size: var(--font-size-monospace-normal);
+  line-height: var(--line-height-data);
+}
+
+.InspectedRequest input {
+  font-size: var(--font-size-sans-small);
+}
+
+.InspectedRequestKey {
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border); 
+}
+.InspectedRequestKey:first-of-type {
+  border-top: none;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  font-family: var(--font-family-sans);
+  text-transform: capitalize;
+}
+
+.TitleRow {
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-monospace-large);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.5rem;
+}
+
+.HeaderRow {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-size-sans-large);
+  font-weight: bold;
+}
+
+.keyValue {
+  display: inline-flex;
+  width: 100%;
+}
+
+.keyValue div:first-child {
+  flex: 0 0 120px;
+}
+
+.keyValue div:last-child {
+  flex: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.Item:not([hidden]) {
+  display: flex;
+}
+
+
+.General {
+  padding: 0.25rem 0.25rem 0.25rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+
+.json-key {
+  color: #792675;
+}
+
+.json-number {
+  color: #0D22AA;
+}
+
+.json-string {
+  color: #000000;
+}
+
+.json-boolean {
+  color: #0D22AA;
+}
+
+.json-null {
+  color: #666666;
+}

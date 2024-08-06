@@ -1,0 +1,212 @@
+.RequestsTablesWrapper {
+    position: relative;
+}
+
+.RequestsTablesWrapper > div {
+    display: flex;
+}
+
+.RequestsTablesWrapper table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.RequestsTablesWrapper th {
+    border-bottom: 1px solid var(--color-border);
+    line-height: 30px;
+    padding: 0 6px;
+}
+
+.RequestsTablesWrapper td {
+    padding: 7px 6px;   
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.RequestsTableHeads {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-background);
+}
+
+.RequestsTableBodies {
+    padding-top: 30px;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.RequestsTableHead:first-child {
+    flex: 0 0 40%;
+}
+
+.RequestsTableHead:nth-child(2) {
+    flex: 0 0 10%;
+}
+
+.RequestsTableHead:last-child {
+    flex: 0 0 50%;
+}
+
+
+.RequestsTableBody {
+    overflow-x: clip;
+}
+
+.RequestsTableBody:first-child {
+    flex: 0 0 40%;
+}
+
+.RequestsTableBody:nth-child(2) {
+    flex: 0 0 10%;
+}
+
+.RequestsTableBody:last-child {
+    flex: 0 0 50%;
+}
+
+
+.RequestsTable {
+    position: relative;
+    overflow: hidden;
+    font-size: var(--font-size-monospace-normal);
+}
+
+.RequestsTableHead {
+    /* position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-background); */
+}
+
+.RequestsTableBody {
+    height: 100%;
+}
+
+.RequestsTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.RequestsTable th {
+    border-bottom: 1px solid var(--color-border);
+    line-height: 30px;
+    padding: 0 6px;
+}
+
+
+.RequestsTable td {
+    padding: 7px 6px;   
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.TableRow {
+    height: 28px;
+}
+
+.TableRow:nth-child(even) {
+    background-color: var(--color-background-table-darker);
+}
+
+.TableRow:hover {
+    background-color: var(--color-background-hover);
+}
+
+
+.AutoSizerWrapper {
+    width: 100%;
+    overflow: hidden;
+    flex: 1 0 auto;
+}
+.AutoSizerWrapper:focus {
+    outline: none;
+}
+
+.NoRequestCell {
+
+}
+
+.TableCell {
+
+}
+
+.SelectedRequest {
+    background-color: var(--color-background-selected) !important;
+    color: var(--color-text-selected);
+}
+
+.ResizableColumn {
+
+}
+
+.Column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-family-sans);
+}
+
+.Column, .Column * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: var(--font-smoothing);
+    /* overflow: visible; */
+}
+
+.ResizeBarWrapper {
+    flex: 0 0 0px;
+    position: relative;
+}
+
+.ResizeBar {
+    position: absolute;
+    left: -2px;
+    width: 5px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
+.LeftColumnWrapper {
+    flex: 0 0 var(--horizontal-resize-percentage);
+}
+
+.LeftColumnWrapper, .Innermostlayer {
+    position: relative;
+    padding-top: 30px;
+}
+
+.RightColumnWrapper, .Innermostlayer {
+    flex: 1 1 50%;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    border-left: 1px solid var(--color-border);
+}
+
+@media screen and (max-width: 600px) {
+    .Column {
+      flex-direction: column;
+    }
+  
+    .TreeWrapper {
+      flex: 0 0 var(--vertical-resize-percentage);
+    }
+  
+    .InspectedElementWrapper {
+      flex: 1 1 50%;
+    }
+  
+    .ResizeBar {
+      top: -2px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      cursor: ns-resize;
+    }
+  }

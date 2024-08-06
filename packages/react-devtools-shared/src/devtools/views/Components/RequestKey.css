@@ -1,0 +1,36 @@
+.RequestKey {
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border); 
+}
+
+.RequestKey:first-of-type {
+  border-top: none;
+}
+
+.RequestKey > div {
+  padding: 0.25rem;
+}
+
+.RequestKey div:not(.Header) {
+  font-size: var(--font-size-sans-small);
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  font-family: var(--font-family-sans);
+  text-transform: capitalize;
+}
+
+.Header:hover {
+  background-color: var(--color-background-hover);
+}
+
+.CollapseIcon, .UnfoldedIcon {
+  margin-right: 0.2rem;
+}
+
+.UnfoldedIcon {
+  transform: rotate(90deg);
+}
